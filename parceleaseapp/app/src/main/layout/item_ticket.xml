@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="12dp"
+    card_view:cardElevation="4dp"
+    card_view:cardBackgroundColor="@android:color/white"
+    android:layout_margin="8dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <!-- Status Indicator -->
+        <View
+            android:id="@+id/viewStatusIndicator"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/status_green"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_alignParentLeft="true" />
+
+        <!-- Subject -->
+        <TextView
+            android:id="@+id/textSubject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/viewStatusIndicator"
+            android:text="Ticket Subject"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#000000" />
+
+        <!-- Date -->
+        <TextView
+            android:id="@+id/textDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:text="2025-03-22"
+            android:textSize="12sp"
+            android:textColor="#888888"
+            android:layout_alignTop="@id/textSubject" />
+
+        <!-- Message -->
+        <TextView
+            android:id="@+id/textMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textSubject"
+            android:layout_toEndOf="@id/viewStatusIndicator"
+            android:layout_marginTop="4dp"
+            android:text="Your issue description goes here."
+            android:textSize="14sp"
+            android:textColor="#444444" />
+
+        <!-- Response -->
+        <TextView
+            android:id="@+id/textResponse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textMessage"
+            android:layout_toEndOf="@id/viewStatusIndicator"
+            android:layout_marginTop="4dp"
+            android:text="Response from support team (if any)"
+            android:textSize="13sp"
+            android:textColor="#007BFF"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

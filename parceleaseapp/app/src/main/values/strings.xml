@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Parcel Ease</string>
+    <string name="fab_book_parcel">Book a parcel</string>
+
+
+    <!-- UI Labels -->
+    <string name="create_account">Create Account</string>
+    <string name="hint_full_name">Enter your full name</string>
+    <string name="hint_email">Enter your email</string>
+    <string name="hint_password">Create a password</string>
+    <string name="hint_confirm_password">Confirm your password</string>
+    <string name="terms_conditions">I agree to the Terms &amp; Privacy Policy</string>
+    <string name="google_sign_in">Sign in with Google</string>
+    <string name="API_maps">AIzaSyAmoqeHiFDgTO95JX4dnhPxqraorkniwWA</string>
+    <string name="package_details">Package Details</string>
+    <string name="tracking_number">Tracking Number</string>
+    <string name="scan_to_track">Scan to Track</string>
+    <string name="scan_qr_description">Scan this code with your mobile device to view tracking.</string>
+    <string name="qr_code_description">QR Code for tracking</string>
+    <string name="package_information">Package Information</string>
+    <string name="weight_label">Weight:</string>
+    <string name="dimensions_label">Dimensions:</string>
+    <string name="tracking_history">Tracking History</string>
+    <string name="share_tracking">Share</string>
+    <string name="status_in_transit">In Transit</string>
+
+
+
+    <!-- Accessibility Descriptions -->
+    <string name="back_button">Back</string>
+    <string name="toggle_password">Toggle Password Visibility</string>
+
+    <!-- Forgot Password Screen -->
+    <string name="forgot_password">Forgot Password</string>
+    <string name="lock_icon">Lock Icon</string>
+    <string name="reset_password_instruction">Enter your email to receive password reset instructions.</string>
+    <string name="email_hint">Enter your email</string>
+    <string name="send_reset_link">Send Reset Link</string>
+    <string name="remember_password">Remember your password?</string>
+    <string name="sign_in">Sign In</string>
+    <string name="security_info">Your information is securely stored</string>
+
+
+
+
+        <!-- User Info -->
+        <string name="profile_image">Profile Image</string>
+        <string name="user_name">Alex</string>
+        <string name="user_location">San Francisco, CA</string>
+
+        <!-- Search -->
+        <string name="track_package">Track your package</string>
+
+        <!-- Quick Actions -->
+        <string name="book_parcel">Book Parcel</string>
+        <string name="rent_truck">Rent Truck</string>
+        <string name="support">Support</string>
+        <string name="my_shipments">My Shipments</string>
+        <string name="track">Track</string>
+
+        <!-- Recommended Services -->
+        <string name="recommended_services">Recommended Services</string>
+        <string name="express_delivery">Express Delivery</string>
+        <string name="same_day_delivery">Same day delivery</string>
+
+        <!-- Bottom Navigation -->
+        <string name="nav_home">Home</string>
+        <string name="nav_shipments">Shipments</string>
+        <string name="nav_profile">Profile</string>
+
+
+    <string name="app_logo">App logo</string>
+        <string name="email_or_phone">Email or phone number</string>
+        <string name="password">Password</string>
+        <string name="login">Login</string>
+        <string name="continue_with">------ or continue with ------</string>
+        <string name="google_logo">Google logo</string>
+        <string name="continue_with_google">Continue with Google</string>
+        <string name="don_have_account">Don’t have an account?</string>
+        <string name="sign_up">Sign Up</string>
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>
+
+
+
+

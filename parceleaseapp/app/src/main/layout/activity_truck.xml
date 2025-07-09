@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#F8F9FD">
+
+
+     <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- Header Section -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageButton
+            android:id="@+id/backbut"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/back_arrow"
+            android:contentDescription="Back"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Truck"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <!-- Banner Image -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:src="@drawable/img_20"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="16dp" />
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rent a truck"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get your package delivered today"
+        android:textSize="14sp"
+        android:textColor="#000000" />
+
+
+    <!-- Pickup Location -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="11dp">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:background="@drawable/input_background">
+
+            <ImageView
+                android:id="@+id/iconPickup"
+                android:layout_width="42dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/img_1" />
+
+            <EditText
+                android:id="@+id/from"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginStart="17dp"
+                android:layout_toEndOf="@id/iconPickup"
+                android:background="@android:color/transparent"
+                android:hint="Pickup Location"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnSetPickup"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="Set on Map"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+    <!-- Drop Location -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:background="@drawable/input_background">
+
+            <ImageView
+                android:id="@+id/iconDrop"
+                android:layout_width="39dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/img_1" />
+
+            <EditText
+                android:id="@+id/to"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@id/iconDrop"
+                android:layout_marginStart="17dp"
+                android:hint="Drop Location"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray"
+                android:background="@android:color/transparent" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnSetDrop"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="Set on Map"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/Details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Details"
+        android:textSize="28sp"
+        android:textColor="@color/text_primary"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter name"
+        android:background="@drawable/input_background"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:padding="12dp"
+        android:layout_marginBottom="12dp"/>
+
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter phone number"
+        android:background="@drawable/input_background"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
+        android:padding="12dp"
+        android:layout_marginBottom="12dp"
+        android:inputType="phone"/>
+
+    <!-- Total Expected Load -->
+    <EditText
+        android:id="@+id/edtTotalLoad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Total Expected Load (kg)"
+        android:inputType="number"
+        android:background="@drawable/input_background"
+        android:padding="12dp"
+        android:textColorHint="@color/gray"
+        android:layout_marginTop="16dp" />
+    <EditText
+        android:id="@+id/etpurpose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="purpose:business or house shifting etc..,"
+        android:inputType="number"
+        android:background="@drawable/input_background"
+        android:padding="12dp"
+        android:textColorHint="@color/gray"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/addtionalinfo"
+        android:layout_width="match_parent"
+        android:layout_height="154dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/input_background"
+        android:hint="additional info or instructions"
+        android:inputType="number"
+        android:padding="12dp"
+        android:textColorHint="@color/gray" />
+
+
+
+    <!-- Confirm Button -->
+    <Button
+        android:id="@+id/btnConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Confirm"
+        android:layout_marginTop="24dp" />
+
+</LinearLayout>
+</ScrollView>

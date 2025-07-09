@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/back_arrow"
+                android:contentDescription="Back"/>
+
+            <TextView
+                android:id="@+id/tvHeaderTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Book Parcel"
+                android:textSize="20sp"
+                android:textColor="@color/text_primary"
+                android:layout_marginTop="11dp"
+                android:layout_marginStart="1dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvProgressPercent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100%"
+                android:textColor="@color/blue_primary"/>
+        </LinearLayout>
+
+        <!-- Progress Steps -->
+        <LinearLayout
+            android:id="@+id/layoutProgressSteps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp">
+
+            <include layout="@layout/progress_step_item"/>
+        </LinearLayout>
+
+        <!-- Sender Details Section -->
+
+        <TextView
+            android:id="@+id/tvSenderDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sender details"
+            android:textSize="18sp"
+            android:textColor="@color/text_primary"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp">
+
+            <EditText
+                android:id="@+id/etSenderLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Sender location"
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
+                android:background="@drawable/bg_edit_text"
+                android:padding="12dp"
+                android:layout_toStartOf="@id/senderlocation"
+                android:drawablePadding="8dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:paddingEnd="48dp" />
+
+            <ImageView
+                android:id="@+id/senderlocation"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/img_1"
+                android:padding="8dp"/>
+        </RelativeLayout>
+
+
+        <EditText
+            android:id="@+id/etSenderName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter sender name"
+            android:background="@drawable/bg_edit_text"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"/>
+
+        <EditText
+            android:id="@+id/etSenderPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter sender phone"
+            android:background="@drawable/bg_edit_text"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"
+            android:inputType="phone"/>
+
+        <EditText
+            android:id="@+id/etSenderRemarks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Sender remarks"
+            android:background="@drawable/bg_edit_text"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:padding="12dp"
+            android:layout_marginBottom="24dp"/>
+        <TextView
+            android:id="@+id/tvSelectSavedAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="Select Saved Address"
+            android:textColor="@color/blue"
+            android:textStyle="bold"
+            android:padding="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackground"
+            android:layout_marginTop="8dp" />
+
+        <!-- Receiver Details Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/tvReceiverDetails"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Receiver details"
+                android:textSize="18sp"
+                android:textColor="@color/text_primary"
+                android:textStyle="bold"/>
+
+
+
+            <Switch
+                android:id="@+id/switchSaveReceiver"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="Save for later"
+                android:textColor="@color/text_secondary"/>
+
+
+        </LinearLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp">
+
+
+
+            <EditText
+                android:id="@+id/etRecieverLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Reciever location"
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
+                android:background="@drawable/bg_edit_text"
+                android:padding="12dp"
+                android:layout_toStartOf="@id/recieverlocation"
+                android:drawablePadding="8dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:paddingEnd="48dp" />
+
+            <ImageView
+                android:id="@+id/recieverlocation"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/img_1"
+                android:padding="8dp"/>
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/etReceiverName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter receiver name"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:background="@drawable/bg_edit_text"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"/>
+
+        <EditText
+            android:id="@+id/etReceiverPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter receiver phone"
+            android:textColorHint="@color/black"
+            android:background="@drawable/bg_edit_text"
+            android:textColor="@color/black"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"
+            android:inputType="phone"/>
+
+        <EditText
+            android:id="@+id/etReceiverRemarks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Receiver remarks"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:background="@drawable/bg_edit_text"
+            android:padding="12dp"
+            android:layout_marginBottom="24dp"/>
+        <!-- Package Size -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Package Size"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/btnSizeS"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/bg_button_unselected"
+                android:padding="12dp"
+                android:layout_marginEnd="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="S"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnSizeM"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/bg_button_unselected"
+                android:padding="12dp"
+                android:layout_marginEnd="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="M"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnSizeL"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/bg_button_unselected"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="L"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Choose Type Section -->
+        <TextView
+            android:id="@+id/tvChooseType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose type"
+            android:textSize="18sp"
+            android:textColor="@color/text_primary"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Parcel Types (1st row) -->
+        <LinearLayout
+            android:id="@+id/layoutTypeRow1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:id="@+id/typeBook"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/bg_button_unselected"
+                android:padding="16dp"
+                android:layout_marginEnd="8dp">
+
+                <ImageView
+                    android:id="@+id/iconBook"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_book"/>
+
+                <TextView
+                    android:id="@+id/labelBook"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Book"
+                    android:textColor="@color/text_secondary"
+                    android:layout_marginTop="8dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/typeGoods"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/bg_button_unselected"
+                android:padding="16dp"
+                android:layout_marginEnd="8dp">
+
+                <ImageView
+                    android:id="@+id/iconGoods"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_goods"/>
+
+                <TextView
+                    android:id="@+id/labelGoods"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Goods"
+                    android:textColor="@color/text_secondary"
+                    android:layout_marginTop="8dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/typeCosmetics"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/bg_button_unselected"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/iconCosmetics"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_cosmetics"/>
+
+                <TextView
+                    android:id="@+id/labelCosmetics"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cosmetics"
+                    android:textColor="@color/text_secondary"
+                    android:layout_marginTop="8dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Parcel Types (2nd row) -->
+        <LinearLayout
+            android:id="@+id/layoutTypeRow2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp">
+
+            <LinearLayout
+                android:id="@+id/typeElectronics"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/bg_button_unselected"
+                android:padding="16dp"
+                android:layout_marginEnd="8dp">
+
+                <ImageView
+                    android:id="@+id/iconElectronics"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_electronics"/>
+
+                <TextView
+                    android:id="@+id/labelElectronics"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Electronics"
+                    android:textColor="@color/text_secondary"
+                    android:layout_marginTop="8dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/typeMedicine"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/bg_button_unselected"
+                android:padding="16dp"
+                android:layout_marginEnd="8dp">
+
+                <ImageView
+                    android:id="@+id/iconMedicine"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_plus"/>
+
+                <TextView
+                    android:id="@+id/labelMedicine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Medicine"
+                    android:textColor="@color/text_secondary"
+                    android:layout_marginTop="8dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/typeComputer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/bg_button_unselected"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/iconComputer"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_computer"/>
+
+                <TextView
+                    android:id="@+id/labelComputer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Computer"
+                    android:textColor="@color/text_secondary"
+                    android:layout_marginTop="8dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Weight Section -->
+        <LinearLayout
+            android:id="@+id/layoutWeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/tvWeightLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Weight"
+                android:textColor="@color/black"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                />
+
+            <ImageButton
+                android:id="@+id/btnDecreaseWeight"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_minus"
+                android:background="@drawable/bg_circle_button"
+                android:contentDescription="Decrease quantity"/>
+
+            <EditText
+                android:id="@+id/tvWeight"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:hint="1"
+                android:layout_marginHorizontal="16dp"/>
+
+            <ImageButton
+                android:id="@+id/btnIncreaseWeight"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_plus"
+                android:background="@drawable/bg_circle_button"
+                android:contentDescription="Increase quantity"/>
+        </LinearLayout>
+
+        <!-- Total Amount -->
+        <LinearLayout
+            android:id="@+id/layoutTotal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/tvTotalLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total"
+                android:textColor="@color/text_secondary"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/tvTotalAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$2.00"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"/>
+        </LinearLayout>
+
+        <!-- Process Button -->
+        <Button
+            android:id="@+id/btnProcessNext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Process Next"
+            android:textAllCaps="false"
+            android:background="@drawable/bg_button_primary"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+</ScrollView>

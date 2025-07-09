@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Custom Toolbar with Back Button -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary">
+
+        <ImageButton
+            android:id="@+id/btnBackprofile"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/back_arrow"
+            android:contentDescription="Back"
+            android:padding="8dp" />
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Terms and Conditions"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <!-- Content Area -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/termsTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:textIsSelectable="true"
+            android:text="TERMS AND CONDITIONS :\n\n
+Welcome to ParcelEase! These terms and conditions outline the rules and regulations for the use of our mobile application.\n\n
+1. Acceptance of Terms\n
+By accessing and using this app, you accept and agree to be bound by the terms and conditions of this agreement.\n\n
+2. User Responsibilities\n
+• You are responsible for maintaining the confidentiality of your account information.\n
+• You agree not to use the app for any unlawful or prohibited activities.\n\n
+3. Parcel and Booking Policies\n
+All parcel bookings are subject to verification and approval. You must provide accurate weight and dimension details for each parcel.\n\n
+4. Payment Terms\n
+Payments are processed securely. All charges are displayed before confirming a booking. Refunds are subject to our cancellation policy.\n\n
+5. Liability\n
+ParcelEase is not liable for delays caused by unforeseen circumstances. We are not responsible for lost or damaged parcels unless insured.\n\n
+6. Changes to Terms\n
+We may revise these terms at any time. Continued use of the app signifies your acceptance of the updated terms.\n\n
+7. Contact Us\n
+If you have any questions about these Terms, please contact us through the app support page.\n\n
+Last updated: May 12, 2025" />
+    </ScrollView>
+</LinearLayout>

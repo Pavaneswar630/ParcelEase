@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingHorizontal="8dp">
+
+    <!-- Step 1 (Active) -->
+    <TextView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="@drawable/bg_step_active"
+        android:text="1"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textStyle="bold" />
+
+    <!-- Line between steps -->
+    <View
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_weight="1"
+        android:background="@color/step_line"
+        android:layout_marginHorizontal="4dp" />
+
+    <!-- Step 2 -->
+
+
+
+    <!-- Step 3 -->
+
+
+
+    <!-- Step 4 -->
+    <TextView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="@drawable/bg_step_inactive"
+        android:text="4"
+        android:textColor="@color/text_secondary"
+        android:gravity="center" />
+</LinearLayout>
