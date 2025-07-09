@@ -1,0 +1,15 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="60dp"
+    android:height="60dp"
+    android:viewportWidth="60"
+    android:viewportHeight="60">
+
+    <!-- 🟠 Main Circle -->
+    <path
+        android:fillColor="#3F51B5"
+        android:pathData="M30,0
+            A30,30 0 1,1 29.99,0Z" />
+
+    <!-- 🔻 Chat Tail Triangle -->
+
+</vector>

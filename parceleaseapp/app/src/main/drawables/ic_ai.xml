@@ -1,0 +1,33 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+
+    <!-- Head (AI face) -->
+    <path
+        android:fillColor="#E3F2FD"
+        android:pathData="M10,14a10,10 0 0,1 10,-10h8a10,10 0 0,1 10,10v12a10,10 0 0,1 -10,10h-8a10,10 0 0,1 -10,-10V14z" />
+
+
+    <!-- Smile -->
+    <path
+        android:pathData="M20,28 Q24,32 28,28"
+        android:strokeColor="#1565C0"
+        android:strokeWidth="2"
+        android:strokeLineCap="round" />
+
+
+    <!-- Brainwaves / Circuit lines (left and right) -->
+    <path
+        android:pathData="M6,20 h4"
+        android:strokeColor="#90CAF9"
+        android:strokeWidth="2"
+        android:strokeLineCap="round" />
+    <path
+        android:pathData="M38,20 h4"
+        android:strokeColor="#90CAF9"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        />
+</vector>

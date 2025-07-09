@@ -1,0 +1,13 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Circle background -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#FFFFFF"/>
+        </shape>
+    </item>
+
+    <!-- Vector icon centered -->
+    <item android:gravity="center">
+        <drawable android:drawable="@drawable/img_33" />
+    </item>
+</layer-list>
