@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Back Button & Title -->
+        <ImageView
+            android:layout_width="38dp"
+            android:layout_height="33dp"
+            android:layout_gravity="start"
+            android:layout_marginBottom="20dp"
+            android:contentDescription="Back"
+            android:onClick="onBackPressed"
+            android:src="@drawable/back_arrow" />
+
+        <!-- Create Account Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Account"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Welcome Text -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome!"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create an account to get started"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Full Name Input -->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Enter your full name"
+            android:background="@drawable/input_background"
+            android:textSize="16sp"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Email Input -->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Enter your email"
+            android:textSize="16sp"
+            android:padding="12dp"
+            android:background="@drawable/input_background"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Password Input -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/input_background"
+            android:layout_marginBottom="10dp">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Create a password"
+                android:textSize="16sp"
+                android:background="@null"
+                android:inputType="textPassword"/>
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="34dp"
+                android:contentDescription="Toggle Password Visibility"
+                android:src="@drawable/eye" />
+        </LinearLayout>
+
+        <!-- Password Strength Bar -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#007AFF"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Confirm Password Input -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Confirm your password"
+                android:textSize="16sp"
+                android:background="@null"
+                android:inputType="textPassword"/>
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="34dp"
+                android:src="@drawable/eye"
+                android:contentDescription="Toggle Password Visibility"/>
+        </LinearLayout>
+
+        <!-- Terms & Conditions Checkbox -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="20dp">
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@android:color/darker_gray"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="I agree to the "
+                android:textSize="14sp"
+                android:textColor="#666666"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Terms of Service"
+                android:textSize="14sp"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" and "
+                android:textSize="14sp"
+                android:textColor="#666666"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Privacy Policy"
+                android:textSize="14sp"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <!-- Create Account Button -->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Create Account"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:backgroundTint="#007AFF"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#DDDDDD"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- Or Continue With -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Or continue with"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- Google & Apple Buttons -->
+        <LinearLayout
+            android:id="@+id/btn_google_signin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:paddingRight="30dp"
+            android:gravity="center"
+            android:layout_marginTop="10dp">
+
+            <!-- Google Logo -->
+            <ImageView
+                android:layout_width="43dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/google1" />
+
+            <!-- Text "Continue with Google" -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="sign in with Google"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:background="@drawable/blue_border"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <!-- Already Have an Account? -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already have an account? "
+            android:textSize="14sp"
+            android:textColor="#666666"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Log in"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="14sp"
+            android:background="@drawable/blue_border"
+            android:textStyle="bold" />
+    </LinearLayout>
+</ScrollView>
